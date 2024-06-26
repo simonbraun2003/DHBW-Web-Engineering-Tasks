@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adresse</title>
+    <script src="aufgabe-02.js"></script>
+</head>
+<body>
+    <form name="formular" method="post">
+        <fieldset>
+            <legend>Adresseingabe</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name">
+            <label for="preName">Vorname</label>
+            <input type="text" id="preName">
+            <label for="street">Straße</label>
+            <input type="text" id="street">
+            <label for="housenumber">Hausnummer</label>
+            <input type="text" id="housenumber">
+            <label for="plz">Postleizahl</label>
+            <input type="text" id="plz">
+            <label for="ort">Ort</label>
+            <input type="text" id="ort">
+            <input type="button" value="submit" onclick="submitListener()">
+            <input type="reset">
+        </fieldset>
+    </form>
+    <p onclick="listener('name')" id="pName">Name:</p>
+    <p onclick="listener('preName')" id="pVorname">Vorname:</p>
+    <p onclick="listener('street')" id="pStraße">Straße:</p>
+    <p onclick="listener('housenumber')" id="pHausnummer">Hausnummer:</p>
+    <p onclick="listener('plz')" id="pPLZ">Postleizahl:</p>
+    <p onclick="listener('ort')" id="pOrt">Ort:</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Superheldenmission</title>
+    <link rel="stylesheet" href="aufgabe-03.css">
+    <script src="aufgabe-03.js"></script>
+</head>
+<body>
+    <div>
+        <input type="checkbox" id="batman" name="bat" onchange="chkb_listener('batman')">
+        <label for="batman">Batman</label>
+        <input type="checkbox" id="superman" name="sup" onchange="chkb_listener('superman')">
+        <label for="superman">Superman</label>
+        <input type="checkbox" id="aquaman" name="aqu" onchange="chkb_listener('aquaman')">
+        <label for="aquaman">Aquaman</label>
+    </div>
+    <button id="btn" disabled="disabled" onclick="btn_listener()">Starte Mission</button>
+    <label for="btn" id="lbl">Count:</label>
+</body>
+</html>
