@@ -1,0 +1,19 @@
+{
+  "name": "dhbw-web-engineering-tasks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simonbraun2003/DHBW-Web-Engineering-Tasks.git"
+  },
+  "private": true,
+  "dependencies": {
+    "express": "^4.19.2",
+    "formidable": "^3.5.1",
+    "upper-case": "^3.0.0"
+  }
+}
