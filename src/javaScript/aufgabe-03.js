@@ -1,33 +1,26 @@
-const button = document.getElementById('btn');
-const label = document.querySelector('#lbl');
-const bat_chkb  = document.querySelector('input[name=bat]');
-const sup_chkb  = document.querySelector('input[name=sup]');
-const aqu_chkb  = document.querySelector('input[name=aqu]');
-let chkb_counter = 0;
+const startButton = document.querySelector('#start');
+const countText = document.querySelector("#superheldencount");
+let superheldenCount = 0;
 
-const chkb_listener = function (pID){
-    //alert();
-    if(document.getElementById(pID).checked){
-        chkb_counter += 1;
-        //alert(`++`)
+
+function toggleSuperheld(checkbox){
+    if(checkbox.checked){
+        superheldenCount += 1;
     }else{
-        chkb_counter -=1;
-        //alert('--')
+        superheldenCount -= 1;
     }
-    label.innerText = 'Count: ' + chkb_counter;
+    countText.innerText = superheldenCount;
+    checkSuperheldencount();
+}
 
-    if(chkb_counter > 0){
-        //alert('asds')
-        button.disabled = false
+function checkSuperheldencount(){
+    if(superheldenCount === 0){
+        startButton.disabled = true;
     }else{
-        button.disabled = true;
+        startButton.disabled = false;
     }
 }
-const btn_listener = function (){
-    alert('click')
-}
-button.addEventListener('click', btn_listener);
 
-bat_chkb.addEventListener("change", chkb_listener );
-sup_chkb.addEventListener("change", chkb_listener);
-aqu_chkb.addEventListener("change", chkb_listener);
+function startAbenteuer(){
+    alert('Dein Abenteuer beginnt');
+}

@@ -1,21 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Superheldenmission</title>
-    <link rel="stylesheet" href="aufgabe-03.css">
-    <script src="aufgabe-03.js"></script>
-</head>
-<body>
-    <div>
-        <input type="checkbox" id="batman" name="bat" onchange="chkb_listener('batman')">
-        <label for="batman">Batman</label>
-        <input type="checkbox" id="superman" name="sup" onchange="chkb_listener('superman')">
-        <label for="superman">Superman</label>
-        <input type="checkbox" id="aquaman" name="aqu" onchange="chkb_listener('aquaman')">
-        <label for="aquaman">Aquaman</label>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Superheldenmission</title>
+
+        <style>
+            .superhelden {
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+            }
+
+            .superhelden > div {
+                margin: 10px;
+                padding: 10px;
+                text-align: center;
+            }
+        </style>
+
+    </head>
+    <body>
+    <div class="superhelden">
+        <div>
+            <p>Batman</p>
+            <input type="checkbox" onchange="toggleSuperheld(this)">
+        </div>
+        <div>
+            <p>Superman</p>
+            <input type="checkbox" onchange="toggleSuperheld(this)">
+        </div>
+        <div>
+            <p>Aquaman</p>
+            <input type="checkbox" onchange="toggleSuperheld(this)">
+        </div>
+        <div>
+            <p>Iron-Man</p>
+            <input type="checkbox" onchange="toggleSuperheld(this)">
+        </div>
+        <div>
+            <p>Captain America</p>
+            <input type="checkbox" onchange="toggleSuperheld(this)">
+        </div>
     </div>
-    <button id="btn" disabled="disabled" onclick="btn_listener()">Starte Mission</button>
-    <label for="btn" id="lbl">Count:</label>
-</body>
+    <p>Bereit?</p>
+    <button id="start" onclick="startAbenteuer()" disabled="disabled">Mission starten</button>
+    <p>Du spielst mit <span id="superheldencount">0</span> Superhelden </p>
+    <script type="text/javascript" src="aufgabe-03.js"></script>
+    </body>
 </html>
